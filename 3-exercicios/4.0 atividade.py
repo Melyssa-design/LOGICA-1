@@ -6,7 +6,7 @@ os.system("clear")
 # Usando uma linha para cada resultado.
 
 primeiro_numero = float(input("Digite o valor do Primeiro numero: "))
-segundo_numero = float(input("Digite o valor do Segundo numeroa: "))
+segundo_numero = float(input("Digite o valor do Segundo numero: "))
 
 # media = (primeiro_numero + segundo_numero) / 2
 

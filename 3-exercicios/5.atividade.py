@@ -9,5 +9,5 @@ os.system("clear")
 #solicitando dados
 
 primeiro_numero = int(input("Digite o valor do Primeiro numero: "))
-segundo_numero = int(input("Digite o valor do Segundo numeroa: "))
+segundo_numero = int(input("Digite o valor do Segundo numero: "))
 
