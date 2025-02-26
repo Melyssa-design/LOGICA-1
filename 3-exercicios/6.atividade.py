@@ -18,3 +18,4 @@ print(f"Menor: {menor}")
 print(f"Primeiro numero: {primeiro_numero}")
 print(f"Segundo numero: { segundo_numero}")
 
+print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")

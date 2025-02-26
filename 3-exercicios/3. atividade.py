@@ -20,3 +20,5 @@ if media < 7:
     print("REPROVADO. ")
 else:
     print('APROVADO.')
+
+print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")

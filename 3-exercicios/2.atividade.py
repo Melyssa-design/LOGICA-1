@@ -15,3 +15,5 @@ elif valor ==10:
 else:
     print ("É MENOR QUE DEZ")
 print("== FIM ==")
+
+print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")

@@ -24,3 +24,5 @@ print(f"Média: {media}")
 print(f"Produto: {produto}")
 print(f"Menor: {menor}")
 print(f"Maior: {maior}")
+
+print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")

@@ -13,4 +13,4 @@ if valor > 10:
 else:
     print("NÃO É MAIOR QUE 10!")
 
-print("== fim ==")
+print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")

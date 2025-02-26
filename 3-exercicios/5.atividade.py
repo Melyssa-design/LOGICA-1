@@ -30,3 +30,5 @@ if primeiro_numero == segundo_numero:
 else: 
      print(f"Menor: {menor}")
      print(f"Maior: {maior}")
+
+     print("\n ==QUE A FORÇA ESTEJA COM VOCÊ== ")
