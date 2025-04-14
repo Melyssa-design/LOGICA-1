@@ -5,9 +5,6 @@ def imc(peso,altura):
     imc = peso/altura*altura
     return imc
 
-match imc:
-    case 1:
-        imc <= 
 
 
 
