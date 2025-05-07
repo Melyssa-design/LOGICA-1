@@ -13,7 +13,8 @@ class funcionario:
         print(f"\nNome: {self.nome}, \nData de nascimento:{self.data_de_nascimento}, \nRG: {self.rg}, \nCPF: {self.cpf}")
 
 lista_de_funcionarios = []
-QUANTIDADE_DE_FUNCIONARIOS = 1
+QUANTIDADE_DE_FUNCIONARIOS = 2
+
 for i in range(QUANTIDADE_DE_FUNCIONARIOS):
     Funcionario = funcionario(
         nome = input("Digite seu nome: "),
@@ -21,15 +22,14 @@ for i in range(QUANTIDADE_DE_FUNCIONARIOS):
         rg = input("Digite seu RG: "),
         cpf = input("Digite seu CPF: ")
     )
-    lista_de_funcionarios.append(funcionario)
+    lista_de_funcionarios.append(Funcionario)
     os.system("clear")
 
 nome_arquivo = "Funcionarios.txt"
 with open(nome_arquivo, "a") as arquivo_funcionario:
-    for funcionario in lista_de_funcionarios:
+    for Funcionario in lista_de_funcionarios:
         arquivo_funcionario.write(f"\n{Funcionario.nome}\n{Funcionario.data_de_nascimento}\n{Funcionario.rg}\n{Funcionario.cpf}\n")
 print("\nDados dos funcionarios salvos com sucesso")
-
 
 
 try:
