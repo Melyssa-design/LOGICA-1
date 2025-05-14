@@ -1,111 +1,102 @@
 import os
-os.system("clear")
+import time
+os.system ("clear")
 from dataclasses import dataclass
 
-
 @dataclass
-class funcionario:
+class dados:
     nome: str
-    data_de_nascimento: str
     cpf: str
-    funcao: str
+    cargo: str
+    salario: str
 
-    
-def exibir_dados(self):
-        print(f"Nome: {self.nome}, Data de Nascimento: {self.data_de_nascimento}, CPF: {self.cpf}, Função: {self.funcao}")
-    
 lista_funcionarios = []
+
+    # Função para verificar se a lista está vazia.
+def verificar_lista_vazia(lista_funcionarios):
+    if not lista_funcionarios: 
+        print("\nA lista está vazia.")
+        return True
+    return False 
+
+def listar_funcionario():
+    if verificar_lista_vazia(lista_funcionarios):
+        return
+    print("\n - Lista de funcionários - ")
+    for funcionario in lista_funcionarios:
+        print(f"- Nome: {funcionario.nome}, \nCPF: {funcionario.cpf}, \nCargo: {funcionario.cargo}, \nSalário: {funcionario.salario}")
+
+def cadastrar_funcionario():
+    nome = input("Digite o nome do funcionário: ")
+    cpf = input("Digite o CPF do funcionário: ")
+    cargo = input("Digite o cargo do funcionário: ")
+    salario = input ("Digite o salario do funcionáorio: ")
+    lista_funcionarios.append(dados(nome, cpf, cargo, salario))
+    print(f"\nFuncionário {nome} cadastrado com sucesso.")
     
-for i in range():
-        Funcionario = funcionario
-        
-        def verificar_lista_vazia(lista_funcionarios):
-            if not lista_funcionarios:
-                 print("\nA lista está vazia.")
-                 return True
-            return False
-        
+  
+def listar_funcionario():
+    if verificar_lista_vazia(lista_funcionarios):
+        return
+    print("\n _Lista de funionarios_")
+    for funcionario in lista_funcionarios:
+        print(f"- \nNome: {funcionario.nome} \nCPF: {funcionario.cpf} \nCargo: {funcionario.cargo} \nSalário: {funcionario.salario}")
     
-        def adicionar_funcionario(lista_funcionario):
-            nome = input("Digite o nome do funcionário: ")
-            data_de_nascimento = input("Digite a data de nascimento do funcionário: ")
-            cpf = input("Digite o CPF do funcionário: ")
-            funcao = input("Digite a função do funcionário: ")
-            lista_funcionario.append(nome, data_de_nascimento, cpf, funcao)
-            print(f"\Cadastro do funcionário {nome} realizado com sucesso.")
-
-        def mostrar_funcioinarios(lista_funcionarios):
-             if funcionario.verificar_lista_vazia(lista_funcionarios):
-                return
-        ("\n - lista de funcionários" )
-
-
-        print("\n - Lista de funcionários")
-        for funcionario in lista_funcionarios:
-            print(f" - Nome: ^{funcionario.nome}, Data de Nascimento: {funcionario.data_de_nascimento}, CPF: {funcionario.cpf}, Função: {funcionario.funcao}")
-
-        def mostrar_funcionarios(lista_funcionarios):
-            nome_antigo = input("Digite o nome di funcionario que deseja atualizar: ")
-            if nome_antigo in lista_funcionarios:
-                novo_nome = input(f"Digite o novo nome para {nome_antigo}: ")
-                indice = lista_funcionarios.index(nome_antigo)
-                lista_funcionarios[indice] = novo_nome
-                print(f"{nome_antigo} foi atualizado para {novo_nome}.")
-            else:
-                print(f"\nO nome {nome_antigo} não foi encontrado.")
-                return
+def atualizar_funcionario():
+    if verificar_lista_vazia(lista_funcionarios):
+        return
     
-        def atualizar_nome_do_funcionario(lista_funcionarios):
-             if funcionario.verificar_lista_vazia(lista_funcionarios):
-              return
-        
-        mostrar_funcionarios(lista_funcionarios)
-        nome_antigo = input("Digite o nome do funcionario que deseja atualizar: ")
-        if nome_antigo in lista_funcionarios:
-            novo_nome = input(f"Digite o novo nome para {nome_antigo}")
-            indice = lista_funcionarios.index(nome_antigo)
-            lista_funcionarios[indice] = novo_nome
-            print(f"{nome_antigo} foi atualizado para {novo_nome}.")
-        else:
-            print(f"\nO nome {nome_antigo} não foi encontrado.")
-            
+    listar_funcionario()
     
-        def excluir_funcionario(lista_funcionarios):
-            if funcionario.verificar_lista_vazia(lista_funcionarios):
-                return
-        
-            mostrar_funcionarios(lista_funcionarios)
+funcionario = []
 
-            nome_remover = input("Digite o nome do funcionario que deseja remover: ")
-            if nome_remover in lista_funcionarios:
-                lista_funcionarios.remove(nome_remover)
-                print(f"O nome {nome_remover} foi removido com sucesso.")
-            else:
-              print(f"O nome {nome_remover} não foi encontrado.")
-       
-nomes = []
+def exibir_menu():
+    """
+    Exibe o menu interativo para o usuário.
+    """
+    print("\n╔═══════════════════════════════════╗")
+    print("║   Sistema de Cadastro DENDÊ TECH  ║")
+    print("╠═══════════════════════════════════╣")
+    print("║ 1. Cadastrar Funcionário          ║")
+    print("║ 2. Listar Todos os Funcionários   ║")
+    print("║ 3. Buscar Funcionário Específico  ║")
+    print("║ 4. Atualizar Funcionário          ║")
+    print("║ 5. Excluir Funcionário            ║")
+    print("║ 6. Salvar Dados em CSV            ║")
+    print("║ 7. Carregar Dados de CSV          ║")
+    print("║ 8. Sair                           ║")
+    print("╚═══════════════════════════════════╝")
 
-while True:
-        print("""_DADOS DO FUNCIONÁRIO_
-              1 - Adicionar
-              2 - Listar funcionarios
-              3 - Atualizar
-              4 - Excluir
-              5 - Sair
-              """)
-        opcao = input("Escolha uma opçao: ")
-    
-        match opcao:
-            case 1:
-                adicionar_funcionario(nomes)
-            case 2: 
-                mostrar_funcionarios(nomes)
-            case 3:
-                atualizar_nome_do_funcionario(nomes)
-            case 4:
-                excluir_funcioinario(nomes)
-            case 5:
-                print("\nSaindo do programa.")
-                break
-            case _:
-                print("\nOpção inválida.\nTente novamente.")
+    # --- Função Principal (main) ---
+def main():
+    """
+    Função principal que executa o sistema.
+    """
+    print("Bem-vindo ao Sistema de Cadastro de Funcionários DENDÊ TECH!")
+    carregar_dados_csv() # Carrega dados ao iniciar
+
+    while True:
+        exibir_menu()
+        escolha = input("Escolha uma opção (1-8): ").strip()
+
+        if escolha == '1':
+            cadastrar_funcionario()
+        elif escolha == '2':
+            listar_funcionarios()
+        elif escolha == '3':
+            buscar_funcionario_especifico_interativo()
+        elif escolha == '4':
+            atualizar_funcionario()
+        elif escolha == '5':
+            excluir_funcionario()
+        elif escolha == '6':
+            salvar_dados_csv()
+        elif escolha == '7':
+    # Nome do arquivo CSV 
+
+
+nome_do_arquivo = "funcionarios.csv"
+with open(nome_do_arquivo, "a") as arquivos_funcionario:
+    for funcionario in lista_funcionarios:
+        arquivos_funcionario.write(f"\nNome: {funcionario.nome} \nCPF: {funcionario.cpf} \nCargo: {funcionario.cargo} \nSalario {funcionario.salario}")
+    print(f"\nDados salvos no arquivo {nome_do_arquivo} com sucesso.")
