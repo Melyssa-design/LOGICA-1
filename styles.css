@@ -1,0 +1,16 @@
+body{
+    background:linear-gradient(to right, rgb(37, 171, 180), rgb(197, 240, 243));
+    background-color: rgba(4, 82, 23, 0.767);
+    padding: 0;
+
+}
+table tbody tr {
+    padding: 20px;
+    border: 10 px;
+    font-size: 15px;
+}
+img {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
