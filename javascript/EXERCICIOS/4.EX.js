@@ -13,4 +13,3 @@ let resultado;
 if (pimeiro_numero == segundo_numero) {
     resultado = primeiro_numero + segundo_numero
 }
-
